@@ -1,0 +1,6 @@
+MONGO_URL = 'mongodb+srv://abouzali:pepe@cluster0.jn2kp3t.mongodb.net/backend?retryWrites=true&w=majority&appName=Cluster0'
+JWT_SECRET='s3cr3t'
+MAILER_HOST='smtp.gmail.com'
+MAILER_PORT=587
+MAILER_USERNAME=
+MAILER_PASSWORD=

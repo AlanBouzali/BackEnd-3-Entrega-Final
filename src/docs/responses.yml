@@ -1,0 +1,411 @@
+components:
+  schema:
+    Auth:
+      RespuestaRegister:
+        type: object
+        properties:
+          _id:
+            type: string
+            description: Id de Usuario
+          first_name:
+            type: string
+            description: Nombre de Usuario
+          last_name:
+            type: string
+            description: Apellido de Usuario
+          email:
+            type: string
+            description: Email de Usuario@gmail.com
+          age:
+            type: number
+            description: Edad de Usuario
+          password:
+            type: string
+            description: Password de Usuario
+          role:
+            type: string
+            description: Rol de Usuario
+          cart:
+            type: array
+            description: Carrito de Usuario
+        example: 
+          _id: ksjadljasdlkasjdla
+          first_name: Alan
+          last_name: Bouzali
+          email: Alan
+          age: 32
+          password: 123456
+          role: admin
+          cart: []
+      RespuestaLogin:
+        type: object
+        properties:
+          token:
+            type: string
+            description: Token Usuario
+          message:
+            type: string
+            description: Mensaje de Logueo
+        example: 
+          token: ksjadljasd43535435435345453453454534534543lkasjdla
+          message: Login Exitoso!
+      Error:
+        type: object
+        properties:
+          msj:
+            type: string
+            description: Error Encontrado
+        example:
+          msj: Error al crear el Usuario
+      RespuestaCurrent:
+        type: object
+        properties:
+          message:
+            type: string
+            description: Mensaje Current
+          user:
+            type: object
+            properties: 
+              email:
+                type: string
+                description: Email de Usuario
+              role:
+                type: string
+                description: Rol de usuario
+              cart:
+                type: string
+                description: Id de carrito asociado al Usuario
+        example: 
+          message: Bienvenido!
+          user: 
+            email: Alan@gmail.com
+            role: admin
+            cart: hkjh324ttuytuy324jb
+      RespuestaLogout:
+        type: object
+        properties:
+          message:
+            type: string
+            description: Mensaje Logout
+        example: 
+          message: Sesion Cerrada
+      RespuestaGetAllUsers:
+        type: array
+        items:
+          properties:
+            pets: []
+            _id": 
+              type: string
+              description:  Id de Usuario
+            first_name": 
+              type: string
+              description:  Nombre de Usuario
+            last_name": 
+              type: string
+              description:  Apellido de Usuario
+            email": 
+              type: string
+              description:  Email de Usuario
+            age": 
+              type: number
+              description:  Edad de Usuario
+            password": 
+              type: string
+              description:  Pass Hasheado de Usuario
+            role": 
+              type: string
+              description:  Rol de Usuario
+        example: 
+          _id: ksjadljasdlkasjdla
+          first_name: Alan
+          last_name: Bouzali
+          email: Alan
+          age: 32
+          password: 123456
+          role: admin
+          pets: []
+      RespuestaGetUser:
+        type: object
+        properties:
+          pets:
+            type: array
+            description: Pets de Usuario
+          _id:
+            type: string
+            description: ID de Usuario
+          first_name:
+            type: string
+            description: Nombre de Usuario
+          last_name:
+            type: string
+            description: Apellido de Usuario
+          email:
+            type: string
+            description: Email de Usuario
+          age:
+            type: number
+            description: Edad de Usuario
+          password:
+            type: string
+            description: Password de Usuario
+          role:
+            type: string
+            description: Rol de Usuario
+        example: 
+          pets: []
+          _id: 669f0a6d3a0438b82e49d5c6
+          first_name: Juancit
+          last_name: tutankamon
+          email: jtuta@gmail.com
+          age: 30
+          password: $2b$10$0D6.1v03VPydXGnvwWlO5elh4Wvn76hSr11f98NNJi828iH5TcgQe
+          role: user
+      RespuestaAddProduct:
+        type: object
+        properties:
+          _id:
+            type: string
+            description: ID de Producto
+          title:
+            type: string
+            description: Nombre de Producto
+          description:
+            type: string
+            description: Descripcion de Producto
+          code:
+            type: string
+            description: Codigo de Producto
+          price:
+            type: number
+            description: Precio de Producto
+          category:
+            type: string
+            description: Categoria de Producto
+          status:
+            type: string
+            description: Status de Producto
+        example: 
+          title: Mochila
+          _id: 669f0a6d3a0438b82e49d5c6
+          description: Blanca
+          code: dsfdf345
+          price: 2900
+          stock: 4
+          category: Ropa
+          status: true
+      RespuestaUpdateProduct:
+        type: object
+        properties:
+          _id:
+            type: string
+            description: ID de Producto
+          title:
+            type: string
+            description: Nombre de Producto
+          description:
+            type: string
+            description: Descripcion de Producto
+          code:
+            type: string
+            description: Codigo de Producto
+          price:
+            type: number
+            description: Precio de Producto
+          category:
+            type: string
+            description: Categoria de Producto
+          status:
+            type: string
+            description: Status de Producto
+        example: 
+          title: Mochila
+          _id: 669f0a6d3a0438b82e49d5c6
+          description: Blanca
+          code: dsfdf345
+          price: 2900
+          stock: 4
+          category: Ropa
+          status: true
+      RespuestaGetProductById:
+        type: object
+        properties:
+          _id:
+            type: string
+            description: ID de Producto
+          title:
+            type: string
+            description: Nombre de Producto
+          description:
+            type: string
+            description: Descripcion de Producto
+          code:
+            type: string
+            description: Codigo de Producto
+          price:
+            type: number
+            description: Precio de Producto
+          category:
+            type: string
+            description: Categoria de Producto
+          status:
+            type: string
+            description: Status de Producto
+        example: 
+          title: Mochila
+          _id: 669f0a6d3a0438b82e49d5c6
+          description: Blanca
+          code: dsfdf345
+          price: 2900
+          stock: 4
+          category: Ropa
+          status: true
+      RespuestaAddCart:
+        type: object
+        properties:
+          message:
+            type: string
+            description: Mensaje de Creacion de Cart
+          cart:
+            type: object
+            properties:
+              products:
+                type: array
+                description: Array de Productos
+              _id:
+                type: string
+                description: ID de Carrito
+        example: 
+          message: Se creo un nuevo cart para el Usuario Alan@gmail.com
+          cart: 
+            products: []
+            id: dsfdf345
+      RespuestaAddProductToCart:
+        type: object
+        properties:
+          _id:
+            type: string
+            description: ID de Cart
+          products:
+            type: array
+            items:
+              properties:
+                quantity:
+                  type: number
+                  description: Cantidad de ese producto en carrito
+                _id:
+                  type: string
+                  description: ID de Producto
+        example: 
+          _id: jkeh4k23h42
+          products: 
+            quantity: 1
+            product: dsfdwqeewqf345
+      RespuestaCartPurchase:
+        type: object
+        properties:
+          ticket:
+            type: object
+            properties:
+              code:
+                type: string
+                description: Codigo de Ticket
+              amount:
+                type: number
+                description: Total de compra
+              purchaser:
+                type: string
+                description: Mail de Comprador
+              purchaserId:
+                type: string
+                description: Id de Comprador
+              purchase_datetime:
+                type: string
+                description: Fecha y Hora de Compra
+          ticketProducts:
+            type: array
+            items:
+              properties:
+                quantity:
+                  type: number
+                  description: Cantidad de ese producto
+                product:
+                  type: array
+                  properties:
+                    _id:
+                      type: string
+                      description: ID de Producto
+                    title:
+                      type: string
+                      description: Nombre de Producto
+                    description:
+                      type: string
+                      description: Descripcion de Producto
+                    code:
+                      type: string
+                      description: Codigo de Producto
+                    price:
+                      type: number
+                      description: Precio de Producto
+                    status:
+                      type: boolean
+                      description: Estado de Producto
+                    stock:
+                      type: number
+                      description: Stock de Producto
+                    category:
+                      type: string
+                      description: Categoria de Producto
+          productOutOfStock:
+            type: array
+            items:
+              properties:
+                quantity:
+                  type: number
+                  description: Cantidad de ese producto
+                product:
+                  type: array
+                  properties:
+                    _id:
+                      type: string
+                      description: ID de Producto
+                    title:
+                      type: string
+                      description: Nombre de Producto
+                    description:
+                      type: string
+                      description: Descripcion de Producto
+                    code:
+                      type: string
+                      description: Codigo de Producto
+                    price:
+                      type: number
+                      description: Precio de Producto
+                    status:
+                      type: boolean
+                      description: Estado de Producto
+                    stock:
+                      type: number
+                      description: Stock de Producto
+                    category:
+                      type: string
+                      description: Categoria de Producto
+        example: 
+          ticket: 
+            code: 4fda5527-9739-4c88-8165-1c877b707173
+            amount: 5800
+            purchaser: salames@gmail.com
+            purchaserId: 6705ff732851960a3bf91a16
+            purchase_datetime: "2024-10-09T04:20:56.208Z"
+          ticketProducts: 
+                  quantity: 2
+                  product: 
+                      _id: 66b2a8b1d35a5d997629367d
+                      title: Mochilasd
+                      description: Blancas
+                      code: 123456
+                      price: 90
+                      status: ru
+                      stock: 5
+                      category: Ropa
+          productOutOfStock: []
+
